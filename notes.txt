@@ -1,2 +1,18 @@
+SDK Manager 
+  SDK Tools
+    Google Play Licencing Library
+
+
+
 RTL:
   https://stackoverflow.com/a/52381831/908464
+
+
+Routing, Navigation
+
+  https://reactnavigation.org/docs/getting-started/
+
+
+  yarn add @react-navigation/native
+  yarn add react-native-screens react-native-safe-area-context
+  yarn add @react-navigation/native-stack
