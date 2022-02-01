@@ -6,7 +6,12 @@ export const MenuItem = ({navigation}: any) => {
     <TouchableHighlight>
       <View>
         <Image source={require('../assets/images/drug.png')}></Image>
-        <Text>Dava</Text>
+        <Image
+          style={{width: 50, height: 50}}
+          source={{
+            uri: 'https://reactnative.dev/img/tiny_logo.png',
+          }}></Image>
+        <Text>Dava22</Text>
       </View>
     </TouchableHighlight>
   );
