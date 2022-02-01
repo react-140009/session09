@@ -10,7 +10,8 @@ export const HomeScreen = ({navigation}: any) => {
         <View style={styles.menuContainer}>
           <MenuItem
             img={require('../assets/images/drug.png')}
-            title="دوا"></MenuItem>
+            title="test"
+            onPress={() => alert('salam')}></MenuItem>
           <MenuItem
             img={require('../assets/images/drug.png')}
             title="بیمارستان"></MenuItem>

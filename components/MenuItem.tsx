@@ -8,9 +8,9 @@ import {
   StyleSheet,
 } from 'react-native';
 
-export const MenuItem = ({navigation, img, title}: any) => {
+export const MenuItem = ({navigation, img, title, onPress}: any) => {
   return (
-    <TouchableHighlight>
+    <TouchableHighlight onPress={onPress}>
       <View style={styles.itemContainer}>
         <Image source={img} style={styles.itemImage}></Image>
         <Text>{title}</Text>
