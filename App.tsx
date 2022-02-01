@@ -21,6 +21,9 @@ import {
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {HomeScreen} from './screens/HomeScreen';
+import {AboutUsScreen} from './screens/AboutUscreen';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -29,21 +32,18 @@ const App = () => {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
+  const Stack = createNativeStackNavigator();
+
   return (
     <NavigationContainer>
-      <SafeAreaView style={backgroundStyle}>
-        <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={backgroundStyle}>
-          <View
-            style={{
-              backgroundColor: isDarkMode ? Colors.black : Colors.white,
-            }}>
-            <Text>APP Screen</Text>
-          </View>
-        </ScrollView>
-      </SafeAreaView>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen
+          name="AboutUs"
+          component={AboutUsScreen}
+          options={{title: 'درباره ما'}}
+        />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 };
